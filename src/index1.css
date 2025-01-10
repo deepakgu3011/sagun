@@ -1,0 +1,35 @@
+#head{
+    background:url('https://www.bing.com/th/id/OGC.a53b5a73dd8f9d19b5903e4b565e3d9d?pid=1.7&rurl=https%3a%2f%2fi.pinimg.com%2foriginals%2f90%2ff7%2f8d%2f90f78dc1c45a8345d0bfd7141fb5430b.gif&ehk=U0JvmABFHUT4WnmPZehJ3%2fo%2brSumWAMZ8w8kPPru68o%3d');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.makar {
+    color: orange;
+    animation: colorChange 2s ease-in-out infinite;
+  }
+  
+  .sankranti {
+    color: green;
+    animation: colorChange 2s ease-in-out infinite 0.5s;
+  }
+  
+  .shubhkamnaye {
+    color: blue;
+    animation: colorChange 2s ease-in-out infinite 1s;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      transform: scale(1);
+      color: inherit;
+    }
+    50% {
+      transform: scale(1.2);
+      color: #ff6347; /* Tomato color at mid animation */
+    }
+    100% {
+      transform: scale(1);
+      color: inherit;
+    }
+  }
+  
