@@ -53,6 +53,9 @@ function App() {
     setShareUrl(uniqueUrl);
   };
 
+  // Create share message
+  const shareMessage = `${userName} ने आपके लिए कुछ भेजा है! इसे देखें: ${shareUrl}`;
+
   return (
     <div>
       <header className="text-center py-3 bg-warning" id="head">
@@ -74,7 +77,7 @@ function App() {
 
         {/* Countdown Timer */}
         <div className="countdown">
-          <p class="btn btn-primary">{countdown}</p>
+          <p className="btn btn-primary">{countdown}</p>
         </div>
 
         {/* Kite Flying Animation */}
@@ -91,6 +94,37 @@ function App() {
               className="form-control text-center"
               onClick={(e) => e.target.select()} // Select all text on click for easy copying
             />
+            {/* Share Buttons */}
+            <div className="mt-3 d-flex justify-content-center">
+              <a
+                href={`https://wa.me/?text=${encodeURIComponent(shareMessage)}`}
+                className="btn btn-success mx-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Share on WhatsApp
+              </a>
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                  shareUrl
+                )}&quote=${encodeURIComponent(shareMessage)}`}
+                className="btn btn-primary mx-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Share on Facebook
+              </a>
+              <a
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                  shareMessage
+                )}`}
+                className="btn btn-info mx-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Share on Twitter
+              </a>
+            </div>
           </div>
         )}
       </main>
