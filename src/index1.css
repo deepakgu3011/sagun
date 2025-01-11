@@ -33,3 +33,28 @@
     }
   }
   
+  /* Change the font color */
+.animated-text {
+  color: #ff6600; /* Bright orange */
+  font-size: 1.5em; /* Adjust font size */
+  font-family: "Arial", sans-serif; /* Change font style */
+  text-align: center;
+  margin: 20px;
+}
+
+/* Add animation */
+@keyframes colorPulse {
+  0% {
+    color: #ff6600;
+  }
+  50% {
+    color:rgb(0, 26, 255);
+  }
+  100% {
+    color: #ff6600;
+  }
+}
+
+.animated-text {
+  animation: colorPulse 2s infinite; /* 2-second animation, infinite loop */
+}

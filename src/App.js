@@ -70,9 +70,13 @@ function App() {
 
       <main className="container text-center my-5">
         <h2>
-          {userName
-            ? `${userName} की ओर से आपके और उनके परिवार को मकर संक्रांति की हार्दिक शुभकामनाएँ!`
-            : "अपना नाम नीचे डालें ताकि आप अपना नाम कस्टमाइज़ कर सकें!"}
+        <div className="greeting-container">
+      <p className="animated-text">
+        {userName
+          ? `${userName} की ओर से आपके और उनके परिवार को मकर संक्रांति की हार्दिक शुभकामनाएँ!`
+          : "अपना नाम नीचे डालें ताकि आप अपना नाम कस्टमाइज़ कर सकें!"}
+      </p>
+    </div>
         </h2>
 
         {/* Countdown Timer */}
